@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border:  10px  solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /*Oculta tudo que sair do quadradro*/
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+.nuvens{
+    position: absolute;
+    width: 40rem;
+    margin: 20px 0px 0px 300px;
+    animation:nuvens-animação 10s infinite linear;
+}
+
+.obstaculo {
+    position: absolute; /*img ñ interfere uma na outras*/
+    bottom: 0;
+    width: 80px; /*tamanho do obstaculo*/
+    animation:animação-obstaculo 1.8s infinite linear;
+}
+.mario {
+    position: absolute;
+    bottom: 0;
+    width: 140px;
+}
+
+.pulo {
+    animation: pulo-mario 500ms ease-out; /*ease-out deixa o pulo suavél na descida*/
+}
+
+@keyframes animação-obstaculo {
+    from{                       /*inicio da animação*/
+        right: -80px;
+    }
+    to {                        /*fim da animação*/
+        right: 100%;
+    }
+}
+
+@keyframes pulo-mario {
+    0% {
+        bottom: 0;
+    }
+    40%{
+        bottom: 188px;
+    }
+    50% {
+        bottom: 188px;
+    }
+    60%{
+        bottom:188px ;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes nuvens-animação {
+    from{
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
