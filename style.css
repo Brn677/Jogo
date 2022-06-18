@@ -12,6 +12,7 @@
     position: relative;
     overflow: hidden; /*Oculta tudo que sair do quadradro*/
     background: linear-gradient(#87CEEB, #E0F6FF);
+    
 }
 .nuvens{
     position: absolute;
